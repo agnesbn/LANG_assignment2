@@ -4,6 +4,8 @@ The portfolio for __Language Analytics S22__ consists of 5 projects (4 class ass
 ## 1. Contribution
 The initial assignment was made partly in collaboration with others from the course, but the final code is my own. I made several adjustments to the code since I first handed it in.
 
+https://www.geeksforgeeks.org/python-sentiment-analysis-using-vader/ How to see whether something is negative, positive or neutral.
+
 ## 2. Assignment description by Ross
 ### Main task
 For this assignment, you will write a small Python program to perform NER and sentiment analysis using the techniques you saw in class. You have the choice of one of two different tasks:
