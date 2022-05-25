@@ -80,8 +80,9 @@ def list_to_dict(entity_list):
 def save_bar_plot(top_list, colour, title, plot_name):
     plt.bar(range(len(top_list)), [val[1] for val in top_list], align='center', color = colour)
     plt.xticks(range(len(top_list)), [val[0] for val in top_list])
-    plt.xticks(rotation=70)
+    plt.xticks(rotation=80)
     plt.title(title)
+    plt.subplots_adjust(bottom=0.25)
     plt.savefig(os.path.join("out", "plots", f"{plot_name}.png"), dpi=400)  
     plt.close()
 
