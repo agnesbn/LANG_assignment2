@@ -33,6 +33,18 @@ def vader_scores(df):
     # return list of VADER scores
     return vader_scores
 
+# Get overall evaluation from compound score
+def evaluate_scores(df):
+    evaluation = []
+    for x in df["compound"]:
+        if x >= 0.05:
+            evaluation.append('positive')
+        elif x <= - 0.05:
+            evaluation.append('negative')
+        else:
+            evaluation.append('neutral')
+    return evaluation
+
 # Run a dataframe though an NLP pipeline and get GPEs
 def nlp_pipeline(df, batch_size):
     # list of geopolitical entities and the text_id of the text they occur in
@@ -99,6 +111,14 @@ def real_fake_GPES():
     # create dataframes from the sentiment scores
     r_vader_df = pd.DataFrame(real_vader_scores)
     f_vader_df = pd.DataFrame(fake_vader_scores)
+    # get evaluations
+    r_vader_df["evaluation"] = evaluate_scores(r_vader_df)
+    f_vader_df["evaluation"] = evaluate_scores(f_vader_df)
+    # print distribution of evaluations
+    print("Real news - Distribution of VADER scores")
+    print(r_vader_df['evaluation'].value_counts(normalize=True) * 100)
+    print("Fake news - Distribution of VADER scores")
+    print(f_vader_df['evaluation'].value_counts(normalize=True) * 100)
     # run the dataframes through an nlp pipeline
     print("[INFO] Running real news though NLP pipeline ...")
     r_ents, r_gpes = nlp_pipeline(real_news_df, r_batch_size)
