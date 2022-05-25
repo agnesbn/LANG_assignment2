@@ -35,6 +35,7 @@ For this assignment, you will write a small Python program to perform NER and se
 - Repeat experiments using both sentiment analysis techniques, in order to compare results.
 
 ## 3. Methods
+I decided to go with the second task, i.e. working with the Fake vs Real news dataset.
 ### Main task
 
 
@@ -64,3 +65,14 @@ The data should be provided to the examiner by Ross.
 
 
 ## 5. Discussion of results
+
+
+
+
+
+![GPE_all_news](https://github.com/agnesbn/LANG_assignment2/blob/main/out/plots/GPE_all_news.png)
+
+
+**Fake news**                            |  **Real news**
+:---------------------------------------:|:---------------------------------------:
+![](out/plots/GPE_fake_news.png)         |  ![](out/plots/GPE_real_news.png)
