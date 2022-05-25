@@ -53,6 +53,7 @@ python -m spacy download en_core_web_sm
 ```
 
 ### Get the data
+The data should be provided to the examiner by Ross.
 
 ### Main task
 
