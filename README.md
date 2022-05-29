@@ -72,8 +72,10 @@ The result CSVs are saved in [`out/tables`](https://github.com/agnesbn/LANG_assi
 
 The barplots...
 
-![GPE_all_news](https://github.com/agnesbn/LANG_assignment2/blob/main/out/plots/GPE_all_news.png)
 
+**All news**                             |
+:---------------------------------------:|
+![](out/plots/GPE_all_news.png)          |
 
 **Fake news**                            |  **Real news**
 :---------------------------------------:|:---------------------------------------:
