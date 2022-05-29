@@ -2,9 +2,7 @@
 The portfolio for __Language Analytics S22__ consists of 5 projects (4 class assignments and 1 self-assigned project). This is the __second assignment__ in the portfolio. 
 
 ## 1. Contribution
-The initial assignment was made partly in collaboration with others from the course, but the final code is my own. I made several adjustments to the code since I first handed it in.
-
-https://www.geeksforgeeks.org/python-sentiment-analysis-using-vader/ How to see whether something is negative, positive or neutral.
+The initial assignment was made partly in collaboration with others from the course, but the final code is my own. I made several adjustments to the code since I first handed it in. I used [this blog post](https://www.geeksforgeeks.org/python-sentiment-analysis-using-vader/) to find the threshold for qualitatively evaluate `VADER` scores as either positive, negative, or neutral.
 
 ## 2. Assignment description by Ross
 ### Main task
@@ -22,12 +20,12 @@ For this assignment, you will write a small Python program to perform NER and se
 
 2. Using the corpus of Fake vs Real news, write some code which does the following
 
-   - Split the data into two datasets - one of Fake news and one of Real news
-   - For every headline
-     - Get the sentiment scores
-     - Find all mentions of geopolitical entites
-     - Save a CSV which shows the text ID, the sentiment scores, and column showing all GPEs in that text
-   - Find the 20 most common geopolitical entities mentioned across each dataset - plot the results as a bar charts
+   - Split the data into __two datasets__ - one of Fake news and one of Real news
+   - For every headline:
+     - Get the sentiment scores,
+     - Find all mentions of geopolitical entites,
+     - Save a CSV which shows the text ID, the sentiment scores, and column showing all GPEs in that text.
+   - Find the __20 most common geopolitical entities__ mentioned across each dataset - plot the results as a __bar charts__.
 
 ### Bonus task
 - For the novels, you can try to do the first sentence, too - but this is tricky!
@@ -35,13 +33,13 @@ For this assignment, you will write a small Python program to perform NER and se
 - Repeat experiments using both sentiment analysis techniques, in order to compare results.
 
 ## 3. Methods
-I decided to go with the second task, i.e. working with the Fake vs Real news dataset.
+I decided to go with the __second task__, i.e. working with the Fake vs Real news dataset.
+
 ### Main task
-The [`NER_sentiment.py`](https://github.com/agnesbn/LANG_assignment2/blob/main/src/NER_sentiment.py) script reads the data CSV and after some processing and cleaning of the CSV, it splits it into two dataframes, one for fake news and one for real news. It then calculates `VADER` sentiment scores for each text in both dataframes. Furthermore, a qualitative evaluation of the sentiment scores is added to the dataframe. Here, the sentiment of a text is deemed, __negative__ if the `VADER` compound score is under -0.5, __neutral__ if it is between -0.5 and 0.5, and __positive__ if it is higher than 0.5. Then the geopolitical entities are extracted by running the texts through an NLP pipeline. Finally, the results are saved as CSVs - one for real news and one for fake news - and the geopolitical entities in the texts are counted and the results are saved as barplots – one for the fake news, one for the real news, and one for entities in both texts.
+The [`NER_sentiment.py`](https://github.com/agnesbn/LANG_assignment2/blob/main/src/NER_sentiment.py) script reads the data CSV and after some processing and cleaning of the CSV, it splits it into two dataframes, one for fake news and one for real news. It then calculates __`VADER` sentiment scores__ for each text in both dataframes. Furthermore, a qualitative evaluation of the sentiment scores is added to the dataframe. Here, the sentiment of a text is deemed, __negative__ if the `VADER` compound score is under -0.5, __neutral__ if it is between -0.5 and 0.5, and __positive__ if it is higher than 0.5. Then the geopolitical entities are extracted by running the texts through an NLP pipeline. Finally, the results are saved as CSVs - one for real news and one for fake news - and the geopolitical entities in the texts are counted and the results are saved as barplots – one for the fake news, one for the real news, and one for entities in both texts.
 
 ### Bonus task
 I was not able to complete any of the bonus tasks for this assignment.
-
 
 ## 4. Usage
 ### Install packages
