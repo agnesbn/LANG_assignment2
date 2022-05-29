@@ -65,18 +65,14 @@ The result CSVs are saved in [`out/tables`](https://github.com/agnesbn/LANG_assi
 
 ## 5. Discussion of results
 
-
-
-
-
-
-
 **All news**                             |
 :---------------------------------------:|
 ![](out/plots/GPE_all_news.png)          |
 
+
+As you can tell from the output plots for respectively the fake and the real news, `US` (and variations of this) is mentioned a lot in both the real and the fake news. However, where there is a more even distribution of geopolitical entities in the real news, `US` and `Russia` scores a lot higher than other entities in the fake news dataset. Furthermore, `Iran` scores high in the real news data but not at all in the fake news data.
 **Fake news**                            |  **Real news**
 :---------------------------------------:|:---------------------------------------:
 ![](out/plots/GPE_fake_news.png)         |  ![](out/plots/GPE_real_news.png)
 
-As you can tell, the GPEs were not registrered perfectly and this has skewed the bar plots. For instance, `US`, `U.S.` and `America` were registrered as three different entities. I tried replacing every instance of `U.S.` with `US` but this did not change the results.
+As you can tell, the GPEs were not registrered perfectly and this has skewed the bar plots. For instance, `US`, `U.S.` and `America` were registrered as three different entities. I tried replacing every instance of `U.S.` with `US` in the dataset but this did not change the results.
