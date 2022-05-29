@@ -37,10 +37,10 @@ For this assignment, you will write a small Python program to perform NER and se
 ## 3. Methods
 I decided to go with the second task, i.e. working with the Fake vs Real news dataset.
 ### Main task
-
+The [`NER_sentiment.py`](https://github.com/agnesbn/LANG_assignment2/blob/main/src/NER_sentiment.py) script reads the data CSV and after some processing and cleaning of the CSV, it splits it into two dataframes, one for fake news and one for real news. It then calculates `VADER` sentiment scores for each text in both dataframes. Furthermore, a qualitative evaluation of the sentiment scores is added to the dataframe. Here, the sentiment of a text is deemed, __negative__ if the `VADER` compound score is under -0.5, __neutral__ if it is between -0.5 and 0.5, and __positive__ if it is higher than 0.5. Then the geopolitical entities are extracted by running the texts through an NLP pipeline. Finally, the results are saved as CSVs - one for real news and one for fake news - and the geopolitical entities in the texts are counted and the results are saved as barplots – one for the fake news, one for the real news, and one for entities in both texts.
 
 ### Bonus task
-
+I was not able to complete any of the bonus tasks for this assignment.
 
 
 ## 4. Usage
@@ -49,26 +49,28 @@ Before running the script, you have to install the relevant packages. To do this
 ```
 sudo apt update
 pip install --upgrade pip
-# required packages
 pip install pandas numpy spacy vaderSentiment
-# install spacy model
 python -m spacy download en_core_web_sm
 ```
 
 ### Get the data
-The data should be provided to the examiner by Ross.
+- The data should be provided to the examiner by Ross.
+- Place the data CSV in the `in` folder so that the path to the data is `in/fake_or_real_news.csv`.
 
 ### Main task
+Make sure your current directory is the `LANG_assignment2` folder. Then from the command line, run:
+```
+python src/NER_sentiment.py
+```
 
-
-### Bonus task
-
+The result CSVs are saved in [`out/tables`](https://github.com/agnesbn/LANG_assignment2/tree/main/out/tables) and the result plots are saved in [`out/plots`](https://github.com/agnesbn/LANG_assignment2/tree/main/out/plots).
 
 ## 5. Discussion of results
 
 
 
 
+The barplots...
 
 ![GPE_all_news](https://github.com/agnesbn/LANG_assignment2/blob/main/out/plots/GPE_all_news.png)
 
@@ -76,3 +78,5 @@ The data should be provided to the examiner by Ross.
 **Fake news**                            |  **Real news**
 :---------------------------------------:|:---------------------------------------:
 ![](out/plots/GPE_fake_news.png)         |  ![](out/plots/GPE_real_news.png)
+
+As you can tell, the GPEs were not registrered perfectly and this has skewed the bar plots. For instance, `US`, `U.S.` and `America` were registrered as three different entities.
