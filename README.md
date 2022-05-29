@@ -70,7 +70,7 @@ The result CSVs are saved in [`out/tables`](https://github.com/agnesbn/LANG_assi
 
 
 
-The barplots...
+
 
 
 **All news**                             |
