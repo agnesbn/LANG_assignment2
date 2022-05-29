@@ -79,4 +79,4 @@ The result CSVs are saved in [`out/tables`](https://github.com/agnesbn/LANG_assi
 :---------------------------------------:|:---------------------------------------:
 ![](out/plots/GPE_fake_news.png)         |  ![](out/plots/GPE_real_news.png)
 
-As you can tell, the GPEs were not registrered perfectly and this has skewed the bar plots. For instance, `US`, `U.S.` and `America` were registrered as three different entities.
+As you can tell, the GPEs were not registrered perfectly and this has skewed the bar plots. For instance, `US`, `U.S.` and `America` were registrered as three different entities. I tried replacing every instance of `U.S.` with `US` but this did not change the results.
