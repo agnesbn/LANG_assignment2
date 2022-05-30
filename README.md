@@ -77,4 +77,4 @@ As you can tell from the output plots for respectively the fake and the real new
 :---------------------------------------:|:---------------------------------------:
 ![](out/plots/GPE_fake_news.png)         |  ![](out/plots/GPE_real_news.png)
 
-As you can tell, the GPEs were not registered perfectly and this has skewed the bar plots. For instance, `US`, `U.S.` and `America` were registrered as three different entities. I tried replacing every instance of `U.S.` with `US` in the dataset but this did not change the results so I left it out of the final code.
+As you can tell, the GPEs were not registered perfectly and this has skewed the bar plots. For instance, `US`, `U.S.` and `America` were registered as three different entities. I tried replacing every instance of `U.S.` with `US` in the dataset but this did not change the results so I left it out of the final code.
