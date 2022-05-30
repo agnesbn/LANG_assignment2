@@ -24,8 +24,8 @@ For this assignment, you will write a small Python program to perform NER and se
 
    - Split the data into __two datasets__ - one of Fake news and one of Real news
    - For every headline:
-     - Get the sentiment scores,
-     - Find all mentions of geopolitical entites,
+     - Get the __sentiment scores__,
+     - Find all mentions of __geopolitical entites__,
      - Save a CSV which shows the text ID, the sentiment scores, and column showing all GPEs in that text.
    - Find the __20 most common geopolitical entities__ mentioned across each dataset - plot the results as a __bar charts__.
 
