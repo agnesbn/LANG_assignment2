@@ -2,7 +2,9 @@
 The portfolio for __Language Analytics S22__ consists of 5 projects (4 class assignments and 1 self-assigned project). This is the __second assignment__ in the portfolio. 
 
 ## 1. Contribution
-The initial assignment was made partly in collaboration with others from the course, but the final code is my own. I made several adjustments to the code since I first handed it in. I used [this blog post](https://www.geeksforgeeks.org/python-sentiment-analysis-using-vader/) to find the threshold for qualitatively evaluate `VADER` scores as either positive, negative, or neutral.
+The initial assignment was made partly in collaboration with others from the course, but the final code is my own. I made several adjustments to the code since I first handed it in. 
+
+I used [this blog post](https://www.geeksforgeeks.org/python-sentiment-analysis-using-vader/) to set a threshold for qualitatively evaluating the `VADER` compound scores as either positive, negative, or neutral.
 
 ## 2. Assignment description by Ross
 ### Main task
